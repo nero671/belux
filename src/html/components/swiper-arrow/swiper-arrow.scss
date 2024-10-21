@@ -1,0 +1,9 @@
+.arrow {
+  z-index: 9999;
+  @extend %flex;
+  width: 100%;
+
+  &-slider {
+    cursor: pointer;
+  }
+}

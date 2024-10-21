@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Детальная товара'
+})
+<body>
+<div class="catalog">
+    @@include('html/header/header.html', {})
+    <main class="page">
+        <div data-observ></div>
+        @@include('html/product-detail/product-detail.html', {
+        "img1": {
+        "src1": "images/more1.png",
+        "src2": "images/more6.png"
+        },
+        "img2": {
+        "src1": "images/more2.png",
+        "src2": "images/more5.png"
+        },
+        "img3": {
+        "src1": "images/more3.png",
+        "src2": "images/more4.png"
+        },
+        "img4": {
+        "src1": "images/more4.png",
+        "src2": "images/more3.png"
+        },
+        "img5": {
+        "src1": "images/more5.png",
+        "src2": "images/more2.png"
+        },
+        "img6": {
+        "src1": "images/more6.png",
+        "src2": "images/more1.png"
+        },
+        "tab": {
+        "src1": "images/color/white.svg",
+        "src2": "images/color/black.svg",
+        }})
+        @@include('html/detail-product-info/detail-product-info_more.html', {})
+        @@include('html/goods_group/goods_group.html', {
+        "text": "Состав комплекта"
+        })
+        @@include('html/goods_group/goods_group.html', {
+        "text": "Не забудь купить"
+        })
+        @@include('html/review-slider/review-slider.html', {})
+    </main>
+    @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

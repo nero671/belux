@@ -1,0 +1,117 @@
+.about-banner {
+  position: relative;
+  margin-top: -80px;
+  max-height: 835px;
+  margin-bottom: 200px;
+  @include media(1145) {
+    margin-bottom: -50px;
+  }
+  &__slide {
+    display: grid;
+    position: relative;
+    flex-shrink: 0;
+    @include media(1420) {
+      justify-content: left;
+    }
+  }
+
+  &__img-wrapper {
+    grid-row: 1;
+    grid-column: 1;
+    overflow: hidden;
+    & img {
+      max-height: 911px;
+      @include media(1150) {
+        height: 80%;
+      }
+    }
+    @media(min-width: 2000px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__container {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+
+  }
+
+  &_container-wrapper {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 105px;
+    @include media(1150) {
+      margin: 60px 0;
+      height: 80%;
+      padding-top: 20px;
+    }
+  }
+
+  &_container__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 105px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include media(1022) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-title {
+      font-family: Montserrat Alternates;
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%; /* 61.6px */
+      letter-spacing: -1.68px;
+      color: #FFFFFF;
+      @include media(375) {
+        font-size: 45px;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-direction: row;
+      gap: 65px;
+      @include media(615) {
+        flex-direction: column;
+        gap: 20px;
+      }
+      & p {
+        max-width: 265px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%; /* 22.4px */
+        letter-spacing: -0.48px;
+        color: #FFFFFF;
+      }
+    }
+  }
+  &__footer {
+    margin-top: auto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -0.72px;
+    max-width: 980px;
+    color: white;
+    @include media(990) {
+      max-width: 95vw;
+      font-size: 18px;
+    }
+  }
+}

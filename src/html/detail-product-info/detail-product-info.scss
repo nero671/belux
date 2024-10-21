@@ -1,0 +1,100 @@
+.detail-product-info {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  &__tab-content {
+    display: none;
+    padding-top: 64px;
+    padding-bottom: 200px;
+    &.active {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @include media(1024) {
+        padding-top: 30px;
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+        row-gap: 55px;
+      }
+    }
+    &__table {
+      max-width: 320px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      &_title {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 19.2px */
+        letter-spacing: -0.48px;
+        text-transform: uppercase;
+        padding-bottom: 26px;
+      }
+      &_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid #EFEFF8;
+        gap: 90px;
+        align-items: flex-end;
+        & span {
+          background-color: #F6F6F6;
+          margin: 0;
+          position: relative;
+          bottom: -6px;
+        }
+        &_left {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 140%; /* 19.6px */
+          letter-spacing: -0.42px;
+          color: #A8A9B6;
+        }
+        &_right {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 140%; /* 22.4px */
+          letter-spacing: -0.48px;
+        }
+      }
+    }
+  }
+  .detail-product-info__tab {
+    color: #A8A9B6;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 26px */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &.show {
+      color: #373843;
+    }
+    &-content {
+      @include media(711) {
+        & svg {
+          display: none;
+        }
+      }
+    }
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    row-gap: 12px;
+    @include media(848) {
+      flex-wrap: wrap;
+    }
+    @include media(428) {
+      flex-direction: column;
+    }
+  }
+}

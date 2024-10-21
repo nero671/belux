@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Детальная коллекции'
+})
+<body>
+<div class="wrapper">
+  @@include('html/header/header.html', {})
+  <main class="page collection-detail">
+    <div data-observ></div>
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <div class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">
+            Главная
+          </a>
+          <a href="#" class="breadcrumbs__link">
+            Коллекции
+          </a>
+          <a href="" class="breadcrumbs__link">
+            Биарритц
+          </a>
+        </div>
+      </div>
+    </div>
+    @@include('html/collection-detail-banner/collection-detail-banner.html', {})
+    @@include('html/collection-detail-info/collection-detail-info.html', {})
+    @@include('html/good-catalog/collection-catalog.html', {})
+    @@include('html/new-goods/other-collections.html', {})
+  </main>
+  @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

@@ -1,0 +1,44 @@
+<div class="goods_group">
+  <div class="goods_group__container">
+    @@include('../components/section-title/section-title.html', {
+    "class": "goods_group",
+    "text": "@@text",
+    })
+    <div class="goods_group__wrapper">
+      @@include('../components/good/good.html', {
+      "title": "ЖУРНАЛЬНЫЙ СТОЛИК БИАРРИТЦ",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "242,22 руб.",
+      "old-price": "284,96 руб",
+      "img2": {
+      "src1": "images/good1.png",
+      "src2": "images/good2.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/white.svg",
+      "src2": "images/color/black.svg",
+      }
+      })
+      @@include('../components/good/good.html', {
+      "title": "ЗЕРКАЛО ЭКО",
+      "size": "500 мм × 500 мм ",
+      "price": "118,78 руб.",
+      "old-price": "",
+      "img1": {
+      "src1": "images/mirror.png",
+      },
+      "discount": {
+      "title": "-30%",
+      "bg": "red"
+      },
+      "tab1": {
+      "src1": "images/color/shadow.svg",
+      }
+      })
+    </div>
+  </div>
+</div>

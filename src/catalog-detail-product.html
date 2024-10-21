@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Детальная товара'
+})
+<body>
+<div class="catalog">
+    @@include('html/header/header.html', {})
+    <main class="page">
+        <div data-observ></div>
+        @@include('html/product-detail/product-detail.html', {
+        "img1": {
+        "src1": "images/more1.png",
+        "src2": "images/more6.png"
+        },
+        "tab": {
+        "src1": "images/color/white.svg",
+        "src2": "images/color/black.svg",
+        }
+        })
+        @@include('html/detail-product-info/detail-product-info.html', {})
+        @@include('html/goods_group/goods_group.html', {
+        "text": "Состав комплекта"
+        })
+        @@include('html/goods_group/goods_group.html', {
+        "text": "Не забудь купить"
+        })
+        @@include('html/review-slider/review-slider.html', {})
+    </main>
+    @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

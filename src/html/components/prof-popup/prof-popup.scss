@@ -1,0 +1,118 @@
+.prof-popup {
+
+  &._is-open {
+    z-index: 9999999999;
+  }
+
+  &__wrapper {
+    max-width: 1310px;
+    padding: 40px;
+    gap: 64px;
+    background: #fff;
+
+    @include media(1350) {
+      height: inherit;
+      overflow: auto;
+    }
+
+    @include media(1000) {
+      padding: 16px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 72px;
+    padding: 33px 0;
+    border-top: 1px solid #D2D3E1;
+    border-bottom: 1px solid #D2D3E1;
+
+    @include media(800) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 30px;
+    }
+
+    @include media(500) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &:last-child {
+      border-top: none;
+      margin-top: 0;
+    }
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 32px;
+    border-right: 1px solid #D2D3E1;
+  }
+
+  @include media(800) {
+    &__item:not(:nth-child(3)) {
+      padding-right: 32px;
+      border-right: 1px solid #D2D3E1;
+    }
+  }
+
+  @include media(500) {
+    &__item {
+      padding-right: 0 !important;
+      border-right: none !important;
+
+      &:not(:last-child) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #D2D3E1 !important;
+      }
+    }
+  }
+
+
+
+  &__cross {
+    cursor: pointer;
+    text-align: right;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__title {
+    color: #373843;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -1.14px;
+
+    span {
+      color: #00A0DC;
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    max-width: 560px;
+    color: #80818E;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    letter-spacing: -0.48px;
+  }
+
+  &__text {
+    color: #373843;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.48px;
+    margin-top: 20px;
+  }
+}

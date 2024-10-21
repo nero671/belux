@@ -1,0 +1,139 @@
+.actions {
+
+  &__title {
+    text-align: center;
+  }
+
+  .action {
+    margin-top: 62px;
+
+    &__slide {
+      position: relative;
+
+      &-content {
+        position: absolute;
+        top: 70px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        opacity: 0;
+
+        @include media(1550) {
+          top: 20px;
+        }
+      }
+
+      &.swiper-slide-duplicate-active,
+      &.swiper-slide-active, {
+        .action__slide-content {
+          opacity: 1;
+        }
+      }
+      &-wrapper {
+        img {
+          width: 100%;
+          max-height: 24vw;
+          object-fit: cover;
+          @include media(1499) {
+            max-height: 20vw;
+          }
+          @include media(1100) {
+            max-height: 22vw;
+          }
+          @include media(760) {
+            min-height: 202px;
+            height: 100%;
+          }
+        }
+      }
+
+      &-text {
+        color: #D2D3E1;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -0.6px;
+        text-align: center;
+
+        @include media(1499) {
+          font-size: 20px;
+        }
+        @include media(1000) {
+          font-size: 16px;
+        }
+      }
+
+      &-title {
+        color: #FFF;
+        font-size: 66px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -1.98px;
+        text-align: center;
+
+        @include media(1499) {
+          font-size: 40px;
+        }
+        @include media(1000) {
+          font-size: 24px;
+        }
+      }
+
+      &-btn-wrapper {
+        position: absolute;
+        bottom: 110px;
+
+        .actions__btn {
+          @include media(1000) {
+            padding: 10px 20px;
+          }
+        }
+
+        @include media(1550) {
+          bottom: 60px;
+        }
+      }
+
+    }
+  }
+
+  .action-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    justify-content: space-around;
+
+    @include media(1300) {
+      justify-content: space-between;
+    }
+
+    .action__btn-prev {
+      margin-right: 10%;
+
+      @include media(1550) {
+        margin-right: 0%;
+      }
+
+      @include media(1300) {
+        margin-left: 16px;
+      }
+    }
+
+    .action__btn-next {
+      margin-left: 10%;
+
+      @include media(1550) {
+        margin-left: 0%;
+      }
+
+      @include media(1300) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

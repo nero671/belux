@@ -1,0 +1,118 @@
+.pickup-popup {
+  display: grid;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+  background: rgba(20, 22, 24, 0.4);
+
+  &._is-open {
+    opacity: 1;
+    z-index: 9999999999;
+  }
+
+  &__wrapper {
+    width: 520px;
+    padding: 32px;
+    gap: 64px;
+    background: #fff;
+    @include media(520) {
+      width: auto;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__cross {
+    cursor: pointer;
+    text-align: right;
+  }
+  &__title {
+    padding-top: -26px;
+    font-family: 'Montserrat Alternates';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 33px */
+    letter-spacing: -0.9px;
+    max-width: 361px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #D2D3E1;
+    }
+    &-info {
+      display: none;
+      &.active {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 28px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: -0.42px;
+      }
+    }
+  }
+  &__checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-label {
+      display: flex;
+      flex-direction: column;
+      &__city {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 19.2px */
+        letter-spacing: -0.48px;
+        text-transform: uppercase;
+      }
+      &__address {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%; /* 22.4px */
+        letter-spacing: -0.48px;
+        color: #80818E;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    & button {
+      display: flex;
+      height: 56px;
+      padding: 20px 48px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 8px;
+      background: var(--primary-dark, #373843);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 22.4px */
+      letter-spacing: -0.48px;
+      color: #FFFFFF;
+    }
+  }
+}

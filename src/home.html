@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Главная'
+})
+<body>
+<div class="wrapper main">
+    @@include('html/header/header.html', {})
+    <main class="page">
+        <div data-observ></div>
+        @@include('html/main-slider/main-slider.html', {})
+        @@include('html/new-goods/new-good.html', {})
+        @@include('html/company/company.html', {})
+        @@include('html/collections/collections.html', {})
+        @@include('html/actions/actions.html', {})
+        @@include('html/prof/prof.html', {})
+        @@include('html/main-blog/main-blog.html', {})
+        @@include('html/feedback/feedback.html', {})
+    </main>
+    @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

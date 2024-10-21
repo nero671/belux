@@ -1,0 +1,210 @@
+<section class="order-section__container">
+    @@include('../components/section-title/section-title.html', {
+    "class": "order",
+    "text": "Оформление заказа",
+    })
+    <div class="order__container">
+        <div class="order-info">
+            <div class="order-info__user-data">
+                <div class="order-info__title">Пользовательские данные</div>
+                <form class="order-info__user-data__form" method="post">
+                    <input type="text" placeholder="Имя" class="order-info__user-data__form-firstname">
+                    <input type="text" placeholder="Фамилия" class="order-info__user-data__form-lastname">
+                    <select class="order-info__user-data__form-type">
+                        <option value="fiz">Физическое лицо</option>
+                        <option value="jur">Юридическое лицо</option>
+                    </select>
+                    <input class="order-info__user-data__form-email hidden" type="text" name="compname"
+                           placeholder="Название компании" data-pristine-required-message="*Обязательное поле"
+                           maxlength="100" data-pristine-custom-name="" required="">
+                    <input class="order-info__user-data__form-email hidden" type="text" name="unp"
+                           placeholder="УНП" data-pristine-required-message="*Обязательное поле"
+                           maxlength="100" data-pristine-custom-name="" required="">
+                    <input class="order-info__user-data__form-email" type="text" name="email"
+                           placeholder="Адрес электронной почты" data-pristine-required-message="*Обязательное поле"
+                           maxlength="100" data-pristine-custom-name="" required="">
+                    <input class="order-info__user-data__form-phone" type="text" name="phone"
+                           placeholder="Номер телефона" data-pristine-required-message="*Обязательное поле"
+                           maxlength="100" data-pristine-custom-name="" required="">
+                </form>
+            </div>
+            <div class="order-info__delivery">
+                <div class="order-info__title">Способ доставки</div>
+                <div class="order-info__delivery-option">
+                    <div class="order-info__delivery-radio">
+                        <div class="order-info__delivery-radio__input">
+                            <input type="radio" id="pickup">
+                            <label for="pickup">Самовывоз</label>
+                        </div>
+                        <div class="order-info__delivery-pickup" data-type="pickup-popup">
+                            <svg data-type="pickup-popup" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M9.00016 10.0725C10.2925 10.0725 11.3402 9.0248 11.3402 7.73246C11.3402 6.44011 10.2925 5.39246 9.00016 5.39246C7.70781 5.39246 6.66016 6.44011 6.66016 7.73246C6.66016 9.0248 7.70781 10.0725 9.00016 10.0725Z"
+                                      stroke="#00A0DC"/>
+                                <path d="M2.71527 6.3675C4.19277 -0.127498 13.8153 -0.119998 15.2853 6.375C16.1478 10.185 13.7778 13.41 11.7003 15.405C10.1928 16.86 7.80777 16.86 6.29277 15.405C4.22277 13.41 1.85277 10.1775 2.71527 6.3675Z"
+                                      stroke="#00A0DC"/>
+                            </svg>
+                            <div data-type="pickup-popup" class="order-info__delivery-pickup__text">Выбрать пункт выдачи</div>
+                        </div>
+                    </div>
+                    <div class="order-info__delivery-radio">
+                        <div class="order-info__delivery-radio__input">
+                            <input type="radio" id="delivery">
+                            <label for="delivery">Доставка</label>
+                        </div>
+                        <div class="order-info__table">
+                            <div class="order-info__row">
+                                <div class="order-info__row-name">Минск (до 200 руб. )</div>
+                                <div class="order-info__row-value">15 р</div>
+                            </div>
+                            <div class="order-info__row">
+                                <div class="order-info__row-name">Минск (свыше 200 руб.)</div>
+                                <div class="order-info__row-value order-form__row-value_blue">Бесплатно</div>
+                            </div>
+                            <div class="order-info__row">
+                                <div class="order-info__row-name">Регионы</div>
+                                <div class="order-info__row-value">По запросу</div>
+                            </div>
+                        </div>
+                        <div class="order-info__row">
+                            <div class="order-info__row-name">Доставка в течение 45 дней</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-info__delivery-detail" id="fordelivery">
+                    <div class="form-control form-control__col"><input placeholder="Область" type="text"></div>
+                    <select class="order-info__delivery-detail__select">
+                        <option>Населенный пункт</option>
+                    </select>
+                    <input placeholder="Адрес" type="text">
+                    <input placeholder="Этаж, подъезд, домофон (необязательно)" type="text">
+                </div>
+            </div>
+            <div class="order-info__payment">
+                <div class="order-info__title">Способ оплаты</div>
+                <div class="order-info__payment-box">
+                    <div class="order-info__payment-box__input">
+                        <input type="radio" id="pay1">
+                        <label for="pay1">Оплата наличными при получении</label>
+                    </div>
+                    <div class="order-info__payment-box__input">
+                        <input type="radio" id="pay2">
+                        <label for="pay2">Оплата через ЕРИП</label>
+                    </div>
+                    <div class="order-info__payment-box__input">
+                        <input type="radio" id="pay3">
+                        <label for="pay3">Оплата картой</label>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info__order-list">
+                <div class="order-info__title">Состав заказа</div>
+                <div class="order-info__order-list-box">
+                    <div class="order-info__order-list-box__item">
+                        <div class="order-info__order-list-box__item-img">
+                            <a href="#"><img src="images/good1.png" alt=""></a>
+                        </div>
+                        <div class="order-info__order-list-box__item-info">
+                            <div class="order-info__order-list-box__item-info__data">
+                                <div class="order-info__order-list-box__item-info__name">ЖУРНАЛЬНЫЙ СТОЛИК БИАРРИТЦ
+                                </div>
+                                <div class="order-info__order-list-box__item-info__prices">
+                                    <div class="order-info__order-list-box__item-info__price">1 199,98 руб.</div>
+                                    <div class="order-info__order-list-box__item-info__oldprice">1400,00 руб.</div>
+                                </div>
+                            </div>
+                            <div class="order-info__order-list-box__item-info__count">× 1</div>
+                        </div>
+                    </div>
+                    <div class="order-info__order-list-box__item">
+                        <div class="order-info__order-list-box__item-img">
+                            <a href="#"><img src="images/good1.png" alt=""></a>
+                        </div>
+                        <div class="order-info__order-list-box__item-info">
+                            <div class="order-info__order-list-box__item-info__data">
+                                <div class="order-info__order-list-box__item-info__name"><a href="#">ЖУРНАЛЬНЫЙ СТОЛИК
+                                    БИАРРИТЦ</a></div>
+                                <div class="order-info__order-list-box__item-info__prices">
+                                    <div class="order-info__order-list-box__item-info__price">1 199,98 руб.</div>
+                                    <div class="order-info__order-list-box__item-info__oldprice">1400,00 руб.</div>
+                                </div>
+                            </div>
+                            <div class="order-info__order-list-box__item-info__count">× 1</div>
+                        </div>
+                    </div>
+                    <div class="order-info__order-list-box__item">
+                        <div class="order-info__order-list-box__item-img">
+                            <a href="#"><img src="images/good2.png" alt=""></a>
+                        </div>
+                        <div class="order-info__order-list-box__item-info">
+                            <div class="order-info__order-list-box__item-info__data">
+                                <div class="order-info__order-list-box__item-info__name"><a href="#">ТУМБА ПОД
+                                    УМЫВАЛЬНИК АТЛАНТА</a></div>
+                                <div class="order-info__order-list-box__item-info__prices">
+                                    <div class="order-info__order-list-box__item-info__price">1 199,98 руб.</div>
+                                    <div class="order-info__order-list-box__item-info__oldprice"></div>
+                                </div>
+                            </div>
+                            <div class="order-info__order-list-box__item-info__count">× 1</div>
+                        </div>
+                    </div>
+                    <div class="order-info__order-list-box__item">
+                        <div class="order-info__order-list-box__item-img">
+                            <a href="#"><img src="images/good1.png" alt=""></a>
+                        </div>
+                        <div class="order-info__order-list-box__item-info">
+                            <div class="order-info__order-list-box__item-info__data">
+                                <div class="order-info__order-list-box__item-info__name"><a href="#">ТУМБА ПОД
+                                    УМЫВАЛЬНИК АТЛАНТА</a></div>
+                                <div class="order-info__order-list-box__item-info__prices">
+                                    <div class="order-info__order-list-box__item-info__price">1 199,98 руб.</div>
+                                    <div class="order-info__order-list-box__item-info__oldprice"></div>
+                                </div>
+                            </div>
+                            <div class="order-info__order-list-box__item-info__count">× 1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info__comment">
+                <input type="text" placeholder="Комментарий к заказу" name="comment" class="order-info__comment-text">
+            </div>
+        </div>
+        <div class="order-form">
+            <div class="order-form__promocode">
+                <input placeholder="Введите промокод" class="order-form__promocode-input">
+                <button class="order-form__promocode-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 20L16 12L8 4" stroke="white"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="order-form__table">
+                <div class="order-form__row">
+                    <div class="order-form__row-name">Кол-во товаров:</div>
+                    <div class="order-form__row-value">2</div>
+                </div>
+                <div class="order-form__row">
+                    <div class="order-form__row-name">Товаров на сумму:</div>
+                    <div class="order-form__row-value">2399,96 руб.</div>
+                </div>
+                <div class="order-form__row">
+                    <div class="order-form__row-name">Скидка по акциям:</div>
+                    <div class="order-form__row-value order-form__row-value_red">- 100,02 руб.</div>
+                </div>
+                <div class="order-form__row">
+                    <div class="order-form__row-name">Доставка:</div>
+                    <div class="order-form__row-value order-form__row-value_blue">бесплатно</div>
+                </div>
+            </div>
+            <div class="order-form__total">
+                <div class="order-form__total-title">
+                    Итого
+                </div>
+                <div class="order-form__total-value">
+                    2299,94 руб.
+                </div>
+            </div>
+            <button class="order-form__btn">Оформить заказ</button>
+        </div>
+    </div>
+</section>

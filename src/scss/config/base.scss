@@ -1,0 +1,217 @@
+body {
+  background: #F6F6F6;
+  &.lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+html {
+  -ms-overflow-style: scrollbar;
+  scrollbar-gutter: stable;
+}
+body::-webkit-scrollbar {
+  width: 5px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff; /* Цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #050c26; /* Цвет бегунка */
+  border-radius: 20px; /* Округление бегунка */
+  border: 3px solid #050c26; /* Оформление границ бегунка */
+}
+// Базовые анимации:
+// @import "keyframes";
+
+// Стили для полноэкранного блока:
+// @import "fullscreen";
+
+// Стили основного ограничивающего контейнера =================================
+/*
+* (i) Стили будут применяться ко
+* всем классам содержащим *__container
+* Например header__container, main__container и т.д.
+*/
+[class*='__container'] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $mainOffset;
+
+  @include media(1420) {
+    padding: 0 35px;
+  }
+  @include media(635) {
+    padding: 0 16px;
+  }
+}
+// Стили отзывчивых картинок (IBG) ============================================
+[class*='-ibg'] {
+  position: relative;
+  width: 100%;
+
+  img {
+    max-width: 295px;
+    max-height: 295px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+[class*='-ibg_contain'] {
+  img {
+    object-fit: contain;
+  }
+}
+// Стили для обертки модальных окон ===========================================
+[class*='_overlay-bg'] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: $standartTrans; // Можно задать свою анимацию
+  z-index: 2000; // Увеличить если нужно
+  //padding: rem(60) rem(15); // Изменить по макету
+  overflow-y: auto;
+
+  @include media(768) {
+    &::-webkit-scrollbar {
+      // Удалить из за ненадобности
+      display: none;
+    }
+  }
+
+  &._is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+// Оболочка ===================================================================
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden; // clip - если используется в проекте position: sticky
+}
+
+.page {
+  position: relative;
+  flex: 1 1 auto;
+
+  [data-observ] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  &_start {
+    padding-top: $headerHeight;
+  }
+}
+
+*:hover {
+  transition: all $animation-duration ease;
+}
+
+//form label {
+//  position: relative;
+//
+//  input {
+//    transition: 0.3s;
+//  }
+//
+//  span {
+//    color: $redColor;
+//    position: absolute;
+//    left: 5px;
+//    bottom: -175%;
+//    font-size: 14px;
+//    opacity: 0;
+//    transition: 0.3s;
+//  }
+//}
+
+[data-type="sign-in"],
+[data-type="sign-up"] {
+  cursor: pointer;
+
+  svg, a {
+    pointer-events: none;
+  }
+}
+
+.section-padding {
+  padding-top: 240px;
+
+  @include media(1020) {
+    padding-top: 30px;
+  }
+}
+
+.wrapper-ini {
+  height: 100vh;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__title {
+    color: #373843;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -1.68px;
+    margin-bottom: 20px;
+  }
+
+
+  &__links {
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 30px;
+    gap: 20px;
+
+    a {
+      padding: 5px 15px;
+      border: 1px solid #00A0DC;
+      border-radius: 30px;
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+
+//.swiper-button-disabled {
+//  opacity: 0;
+//  transition: 0.35s;
+//}
+
+.form-control__password-btn svg {
+  pointer-events: none;
+}
+
+

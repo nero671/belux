@@ -1,0 +1,54 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 121px;
+  gap: 72px;
+  @include media(430) {
+    padding-top: 44px;
+    padding-bottom: 50px;
+  }
+  @include media(330) {
+    padding-top: 10px;
+    gap: 10px;
+  }
+  &_image {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    & svg {
+      @include media(507) {
+        width: 30%;
+      }
+    }
+  }
+  &_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    &__title {
+      text-align: center;
+      font-family: Montserrat Alternates;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%; /* 33px */
+      letter-spacing: -0.9px;
+    }
+    &__desc {
+      max-width: 452px;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.42px;
+      color: #80818E;
+    }
+  }
+}
+.not-found .pre-footer,
+.not-found .footer {
+  display: none;
+}

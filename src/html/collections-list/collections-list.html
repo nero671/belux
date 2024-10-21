@@ -1,0 +1,190 @@
+<div class="collections-list">
+    <div class="collections-list__container">
+        @@include('../components/section-title/section-title.html', {
+        "class": "collections-img",
+        "text": "Коллекции",
+        })
+        <div class="collections-list__header">
+            <div class="collections-list-filters">
+                <div class="collections-list-filters__item filter-dropdown">
+                    Комната
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 8L12 16L20 8" stroke="#373843"/>
+                    </svg>
+
+                    <div class="after-header__menu-list">
+                        <a href="#">
+                            Ванная комната
+                        </a>
+
+                        <a href="#">
+                            Гостиная
+                        </a>
+
+                        <a href="#">
+                            Кухня
+                        </a>
+                        <a href="#">
+                            Сад
+                        </a>
+                        <a href="#">
+                            Спальня
+                        </a>
+                        <a href="#">
+                            Кабинет
+                        </a>
+                    </div>
+                </div>
+
+                <div class="collections-list-filters__item filter-dropdown">
+                    Стиль
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 8L12 16L20 8" stroke="#373843"/>
+                    </svg>
+
+                    <div class="after-header__menu-list">
+                        <div class="label-wrapper">
+                            @@include('../components/checkbox/checkbox.html', {
+                            "id": "st1",
+                            "checked": "",
+                            "text": "Минимализм",
+                            "value": "(71)"
+                            })
+                            @@include('../components/checkbox/checkbox.html', {
+                            "id": "st2",
+                            "checked": "checked",
+                            "text": "Скандинавский стиль",
+                            "value": "(71)"
+                            })
+                            @@include('../components/checkbox/checkbox.html', {
+                            "id": "st3",
+                            "checked": "",
+                            "text": "Модерн",
+                            "value": "(71)"
+                            })
+                            @@include('../components/checkbox/checkbox.html', {
+                            "id": "st4",
+                            "checked": "checked",
+                            "text": "Loft",
+                            "value": "(71)"
+                            })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collections-list-filters__item filter-dropdown">
+                    Цвет
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 8L12 16L20 8" stroke="#373843"/>
+                    </svg>
+
+                    <div class="after-header__menu-list">
+                        <a href="#" class="after-header__menu-list-link">
+                        <span class="color">
+                            <img src="images/color/white1.svg" alt="Color">
+                        </span>
+                            Белый
+                            <span class="form-control__text_left">(324)</span>
+                        </a>
+
+                        <a href="#" class="after-header__menu-list-link">
+                        <span class="color">
+                            <img src="images/color/gray.svg" alt="Color">
+                        </span>
+                            Серый
+                            <span class="form-control__text_left">(8)</span>
+                        </a>
+
+                        <a href="#" class="after-header__menu-list-link">
+                        <span class="color">
+                            <img src="images/color/black1.svg" alt="Color">
+                        </span>
+                            Черный
+                            <span class="form-control__text_left">(4)</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="collections-list__result">
+                30 коллекций
+            </div>
+        </div>
+
+        <div class="collections-list__footer">
+            <div class="collections-list-filters-results">
+                <div class="collections-list-filters-results__wrapper">
+                    <div class="collections-list-filters-results__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7" stroke="#80818E"/>
+                            <path d="M17 17L7 7" stroke="#80818E"/>
+                        </svg>
+                        Скандинавский стиль
+                    </div>
+                </div>
+
+                <div class="collections-list-filters-results__wrapper">
+                    <div class="collections-list-filters-results__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7" stroke="#80818E"/>
+                            <path d="M17 17L7 7" stroke="#80818E"/>
+                        </svg>
+                        Белый
+                    </div>
+                </div>
+
+                <div class="collections-list-filters-results__wrapper">
+                    <div class="collections-list-filters-results__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7" stroke="#80818E"/>
+                            <path d="M17 17L7 7" stroke="#80818E"/>
+                        </svg>
+                        Черный
+                    </div>
+                </div>
+
+                <div class="collections-list-filters-results__wrapper">
+                    <div class="collections-list-filters-results__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7" stroke="#80818E"/>
+                            <path d="M17 17L7 7" stroke="#80818E"/>
+                        </svg>
+                        Серый
+                    </div>
+                </div>
+                <div class="collections-list-filters-results__remove">
+                    Сбросить все
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="collections-list__images">
+            @@include('../collections-img/collections-img.html', {})
+        </div>
+
+        <div class="pagination-wrapper">
+            @@include('../components/pagination/pagination.html', {})
+            <div class="catalog-filter__pagination-item">
+                Показывать по
+                <div class="custom-select">
+                    <div class="select-selected">
+                        <span>12</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+                        </svg>
+                    </div>
+                    <div class="select-items">
+                        <div>8</div>
+                        <div>12</div>
+                        <div>16</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.forgot {
+  &_container {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 240px;
+    height: auto;
+    @include media(1200) {
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      margin-bottom: 64px;
+    }
+    @include media(767) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      margin-top: 24px;
+      padding-top: 24px;
+    }
+    & .feedback-form {
+      @include media(770) {
+        flex-direction: column;
+      }
+    }
+    & .alert {
+      grid-column: span 7;
+    }
+  }
+
+}

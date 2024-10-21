@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Личный кабинет'
+})
+<body>
+<div class="wrapper">
+  @@include('html/header/header.html', {})
+  <main class="page">
+    <div data-observ></div>
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <div class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">
+            Главная
+          </a>
+          <a href="" class="breadcrumbs__link">
+            Личный кабинет
+          </a>
+        </div>
+      </div>
+    </div>
+    @@include('html/personal/personal.html', {})
+    @@include('html/components/cancel-popup/cancel-popup.html', {})
+    @@include('html/components/more-info-popup/more-info-popup.html', {})
+  </main>
+  @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

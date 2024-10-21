@@ -1,0 +1,104 @@
+.about {
+  & .main-blog {
+    border-top: unset;
+    padding-top: 200px;
+    padding-bottom: 240px;
+    @include media(1024) {
+      padding-bottom: 80px;
+    }
+  }
+  &-advantage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include media(1100) {
+      flex-wrap: wrap;
+    }
+    &__title {
+      font-family: Montserrat Alternates;
+      font-size: 46px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%; /* 50.6px */
+      letter-spacing: -1.38px;
+      @include media(1069) {
+        padding-bottom: 20px;
+      }
+      @include media(420) {
+        font-size: 30px;
+      }
+    }
+    &__block {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      &_item {
+        min-height: 240px;
+        min-width: 320px;
+        grid-column: span 3;
+        background: var(--white, #FFF);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include media(673) {
+          grid-column: span 6;
+        }
+        &__title {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 19.2px */
+          letter-spacing: -0.48px;
+          text-transform: uppercase;
+          max-width: 191px;
+        }
+        &__icon {
+          border-radius: 100px;
+          background: var(--Bg, #F6F6F6);
+          display: inline-flex;
+          padding: 12px;
+          align-items: flex-start;
+          gap: 4px;
+          max-width: 48px;
+        }
+      }
+    }
+  }
+  & .section-padding {
+    padding-top: 200px;
+    @include media(1024) {
+      padding-top: 80px;
+    }
+  }
+  & .company__title {
+    font-size: 46px;
+    max-width: 540px;
+    @include media(400) {
+      font-size: 35px;
+    }
+  }
+}
+
+.company_slider {
+  padding-top: 200px;
+  @include media(1024) {
+    padding-top: 80px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  &__slide {
+    width: fit-content !important;
+    & img {
+      height: 660px;
+      width: 100%;
+      object-fit: cover;
+      @include media(430) {
+        height: 330px;
+      }
+    }
+  }
+}

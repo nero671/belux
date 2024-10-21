@@ -1,0 +1,103 @@
+<div class="side-popup auth" data-popup="sign-in">
+    <div class="side-popup-wrapper">
+        <div class="close-popup button-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path d="M6.18188 6.04596L18.8179 18.682" stroke="#373843" stroke-linecap="round"/>
+                <path d="M5.99994 18.864L18.9999 5.86401" stroke="#373843" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="side-popup__content-wrapper">
+            <div class="side-popup__content">
+                <h2 class="side-popup__title">
+                    Авторизация
+                </h2>
+
+                <form action="/" method="get" class="form-block__form validation-form" novalidate="true">
+                    <div class="form-block__controls">
+                        <div class="form-control form-control--col">
+                            <input id="auth_email_default"
+                                   class="form-control__input "
+                                   type="text"
+                                   name="email"
+                                   placeholder="E-mail*"
+                                   data-pristine-required-message="*Обязательное поле"
+                                   maxlength="100"
+                                   data-pristine-custom-email=""
+                                   required=""
+                            >
+                        </div>
+
+                        <div class="form-control form-control--col">
+                            <input
+                                    id="auth_password_default"
+                                    class="form-control__input "
+                                    type="password"
+                                    name="password"
+                                    placeholder="Пароль*"
+                                    data-pristine-required-message="*Обязательное поле"
+                                    data-pristine-minlength-message="Минимальная длина - 8 символов"
+                                    minlength="8"
+                                    maxlength="20"
+                                    required=""
+                            >
+
+                            <button class="btn form-control__password-btn" aria-label="Сменить видимость пароля" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon btn__icon form-control__password-icon form-control__password-icon--eye" aria-hidden="true" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                    <path d="M8.92002 12.5C8.92002 14.48 10.52 16.08 12.5 16.08C14.48 16.08 16.08 14.48 16.08 12.5C16.08 10.52 14.48 8.92 12.5 8.92C10.52 8.92 8.92002 10.52 8.92002 12.5Z" stroke="#80818E" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 20.77C8.96997 20.77 5.67997 18.69 3.38997 15.09C2.48997 13.68 2.48997 11.31 3.38997 9.9C5.67997 6.3 8.96997 4.22 12.5 4.22C16.03 4.22 19.32 6.3 21.61 9.9C22.51 11.31 22.51 13.68 21.61 15.09C19.32 18.69 16.03 20.77 12.5 20.77Z" stroke="#80818E" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <!--              <svg class="icon btn__icon form-control__password-icon form-control__password-icon&#45;&#45;slash" aria-hidden="true">-->
+                                <!--                <use href="./assets/sprites/sprite-multi.svg#eye-slash"></use>-->
+                                <!--              </svg>-->
+                            </button>
+                        </div>
+                        <div class="form-control__col-checkbox">
+                            <div class="form-check">
+                                <label>
+                                    <input id="remember-me"
+                                           class="custom-checkbox"
+                                           type="checkbox"
+                                           name="remember-me"
+                                           checked=""
+                                           data-hidden-block="card_block_ur"
+                                    >
+                                    <label for="remember-me" class="form-control__text">Запомнить меня</label>
+                                </label>
+                            </div>
+                            <div class="form-control__text">
+                                <a href="#">
+                                    Забыли пароль?
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--btn btn--primary form-block__btn">
+                      <span class="btn__text ">
+                        Войти
+                      </span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="form-block__footer" data-type="sign-up">
+                <a href="#" class="btn " data-dialog="registration">
+
+                        <span class="btn__text ">
+                          Регистрация
+                        </span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="22" viewBox="0 0 62 22" fill="none">
+                        <path d="M50.5 1L60.5 11L50.5 21" stroke="#373843" stroke-linecap="square"/>
+                        <path d="M0.5 11H60.5" stroke="#373843"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

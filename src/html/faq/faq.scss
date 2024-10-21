@@ -1,0 +1,102 @@
+.faq {
+  &__container {
+    padding-bottom: 240px;
+    @include media(407) {
+      padding-bottom: 72px;
+    }
+  }
+  &__title {
+    padding-bottom: 63px;
+  }
+  &_block {
+    padding-bottom: 72px;
+  }
+  &_content {
+    @include media(407) {
+      padding-left: 44px;
+    }
+    display: none;
+    padding-top: 40px;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 67px;
+    max-width: 688px;
+    color: #5A5B67;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.48px;
+    &.open {
+      display: flex!important;
+    }
+  }
+  &_question {
+    border-top: 1px solid #D2D3E1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &:last-child {
+      border-bottom: 1px solid #D2D3E1;
+    }
+    &__text {
+      @include media(407) {
+        font-size: 20px;
+        gap: 20px;
+      }
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 28.8px */
+      letter-spacing: -0.72px;
+      text-transform: uppercase;
+      &_num, &_value {
+        color: #373843;
+      }
+      &.active &_num,
+      &.active &_value {
+        color: #00A0DC;
+      }
+    }
+  }
+  &_plus_minus {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    padding: 20px;
+    background-image: url("../images/icons/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    &.active {
+      background-image: url("../images/icons/minus.svg");
+    }
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    &_btn {
+      border-radius: 8px;
+      background: var(--primary-dark, #373843);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 22.4px */
+      letter-spacing: -0.48px;
+      color: #FFFFFF;
+      max-width: 217px;
+      height: 56px;
+      padding: 22px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

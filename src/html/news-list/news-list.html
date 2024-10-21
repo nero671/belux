@@ -1,0 +1,50 @@
+<div class="news-list">
+    <div class="news-list__container">
+        <div class="news-list__header">
+            @@include('../components/section-title/section-title.html', {
+            "class": "news-list",
+            "text": "Блог",
+            })
+            <div class="news-list-filters">
+                <div class="custom-select">
+                    <div class="select-selected">
+                        <span>2023</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+                        </svg>
+                    </div>
+                    <div class="select-items">
+                        <div>2023</div>
+                        <div>2022</div>
+                        <div>2021</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news-list__images">
+            @@include('../news-img/news-img.html', {})
+        </div>
+
+        <div class="pagination-wrapper">
+            @@include('../components/pagination/pagination.html', {})
+            <div class="catalog-filter__pagination-item">
+                Показывать по
+                <div class="custom-select">
+                    <div class="select-selected">
+                        <span>24</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+                        </svg>
+                    </div>
+                    <div class="select-items">
+                        <div>18</div>
+                        <div>24</div>
+                        <div>32</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

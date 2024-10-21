@@ -1,0 +1,43 @@
+<div class="popup faq-form-popup" data-popup="faq-form">
+    <div class="faq-form-popup__wrapper">
+        <div class="faq-form-popup__header">
+            <div class="faq-form-popup__title">
+                Задайте свой вопрос
+            </div>
+            <div class="faq-form-popup__cross button-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M4.5 4L20.5 20" stroke="#A8A9B6"/>
+                    <path d="M20.5 4L4.5 20" stroke="#A8A9B6"/>
+                </svg>
+            </div>
+        </div>
+        <div class="faq-form-popup__form">
+            <form class="validation-form faq-form">
+                <div class="faq-form-popup__form_inputs">
+                    <div class="faq-form-popup__form_input">
+                        <input type="text" name="name" placeholder="Имя">
+                    </div>
+                    <div class="faq-form-popup__form_input form-control">
+                        <input id="faq_email"
+                               class="form-control__input"
+                               type="text"
+                               name="email"
+                               data-pristine-required-message="*Обязательное поле"
+                               maxlength="100"
+                               data-pristine-custom-email=""
+                               required=""
+                               placeholder="E-mail">
+                    </div>
+                    <div class="faq-form-popup__form_input">
+                        <input type="text" name="faq_text" placeholder="Задайте свой вопрос">
+                    </div>
+                </div>
+                <div class="faq-form-popup__footer">
+                    <div class="faq-form-popup__footer_desc">*Нажимая кнопку “отправить”,  я соглашаюсь с <a href="pay_delivery.html">условиями обработки  персональных данных</a></div>
+                    <button class="faq-form-popup__footer_button">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

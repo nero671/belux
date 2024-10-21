@@ -1,0 +1,474 @@
+<div class="good-catalog">
+  <div class="good-catalog__container">
+    <div class="good-catalog__header">
+      <div class="good-catalog-filters">
+        <div class="good-catalog-filters__item filter-dropdown">
+          Сортировка
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            <a href="#">
+              Сначала дешевые
+            </a>
+
+            <a href="#">
+              Сначала дорогие
+            </a>
+
+            <a href="#">
+              По популярности
+            </a>
+            <a href="#">
+              По новизне
+            </a>
+          </div>
+        </div>
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Цена
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            @@include('../components/range/range.html', {
+            "start": "349",
+            "end": "1900",
+            "min": "349",
+            "max": "2198",
+            "text": "руб."
+            })
+          </div>
+        </div>
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Ширина
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            @@include('../components/range/range.html', {
+            "start": "40",
+            "end": "72",
+            "min": "40",
+            "max": "80",
+            "text": "см"
+            })
+          </div>
+        </div>
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Высота
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            @@include('../components/range/range.html', {
+            "start": "33",
+            "end": "42",
+            "min": "33",
+            "max": "45",
+            "text": "см"
+            })
+          </div>
+        </div>
+
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Коллекция
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            <div class="label-wrapper">
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "col1",
+              "checked": "",
+              "text": "Care",
+              "value": "(30)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "col2",
+              "checked": "checked",
+              "text": "Crail GR",
+              "value": "(12)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "col3",
+              "checked": "",
+              "text": "Idea",
+              "value": "(8)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "col4",
+              "checked": "checked",
+              "text": "Lina",
+              "value": "(11)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "col5",
+              "checked": "checked",
+              "text": "Vortex",
+              "value": "(4)"
+              })
+            </div>
+          </div>
+        </div>
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Производитель
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            <div class="label-wrapper">
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "prod1",
+              "checked": "",
+              "text": "Белюкс",
+              "value": "(30)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "prod2",
+              "checked": "checked",
+              "text": "Керамин",
+              "value": "(12)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "prod3",
+              "checked": "",
+              "text": "Керама Марацци",
+              "value": "(8)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "prod4",
+              "checked": "checked",
+              "text": "Кировит",
+              "value": "(11)"
+              })
+            </div>
+          </div>
+        </div>
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Стиль
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            <div class="label-wrapper">
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "st1",
+              "checked": "",
+              "text": "Минимализм",
+              "value": "(71)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "st2",
+              "checked": "checked",
+              "text": "Скандинавский стиль",
+              "value": "(71)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "st3",
+              "checked": "",
+              "text": "Модерн",
+              "value": "(71)"
+              })
+              @@include('../components/checkbox/checkbox.html', {
+              "id": "st4",
+              "checked": "checked",
+              "text": "Loft",
+              "value": "(71)"
+              })
+            </div>
+          </div>
+        </div>
+
+        <div class="good-catalog-filters__item filter-dropdown">
+          Цвет
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8L12 16L20 8" stroke="#373843"/>
+          </svg>
+
+          <div class="after-header__menu-list">
+            <a href="#" class="after-header__menu-list-link">
+                        <span class="color">
+                            <img src="images/color/white1.svg" alt="Color">
+                        </span>
+              Белый
+              <span class="form-control__text_left">(324)</span>
+            </a>
+
+            <a href="#" class="after-header__menu-list-link">
+                        <span class="color">
+                            <img src="images/color/gray.svg" alt="Color">
+                        </span>
+              Серый
+              <span class="form-control__text_left">(8)</span>
+            </a>
+
+            <a href="#" class="after-header__menu-list-link">
+                        <span class="color">
+                            <img src="images/color/black1.svg" alt="Color">
+                        </span>
+              Черный
+              <span class="form-control__text_left">(4)</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="good-catalog__result">
+        10 товаров
+      </div>
+    </div>
+
+    <div class="good-catalog__footer">
+      <div class="good-catalog-filters-results">
+        <div class="good-catalog-filters-results__wrapper">
+          <div class="good-catalog-filters-results__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 17L17 7" stroke="#80818E"/>
+              <path d="M17 17L7 7" stroke="#80818E"/>
+            </svg>
+            Сначала дешевые
+          </div>
+        </div>
+
+        <div class="good-catalog-filters-results__wrapper">
+          <div class="good-catalog-filters-results__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 17L17 7" stroke="#80818E"/>
+              <path d="M17 17L7 7" stroke="#80818E"/>
+            </svg>
+            33-200 руб.
+          </div>
+        </div>
+
+        <div class="good-catalog-filters-results__wrapper">
+          <div class="good-catalog-filters-results__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 17L17 7" stroke="#80818E"/>
+              <path d="M17 17L7 7" stroke="#80818E"/>
+            </svg>
+            Белый
+          </div>
+        </div>
+
+        <div class="good-catalog-filters-results__wrapper">
+          <div class="good-catalog-filters-results__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 17L17 7" stroke="#80818E"/>
+              <path d="M17 17L7 7" stroke="#80818E"/>
+            </svg>
+            Высота: 20-48 см
+          </div>
+        </div>
+        <div class="good-catalog-filters-results__remove">
+          Сбросить все
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="good-catalog__wrapper">
+
+      @@include('../components/good/good.html', {
+      "title": "ТУМБА ПОД УМЫВАЛЬНИК ЭМИЛИЯ",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "234,47 руб.",
+      "old-price": "284,96 руб",
+      "img2": {
+      "src1": "images/good3.png",
+      "src2": "images/good1.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/brown.svg",
+      "src2": "images/color/beige.svg",
+      }
+      })
+      @@include('../components/good/good.html', {
+      "title": "ЖУРНАЛЬНЫЙ СТОЛИК БИАРРИТЦ",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "242,22 руб.",
+      "old-price": "284,96 руб",
+      "img2": {
+      "src1": "images/good1.png",
+      "src2": "images/good2.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/white.svg",
+      "src2": "images/color/black.svg",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ТУМБА ПОД УМЫВАЛЬНИК",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "499,78 руб.",
+      "old-price": "",
+      "img2": {
+      "src1": "images/good2.png",
+      "src2": "images/good1.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/white.svg",
+      "src2": "images/color/black.svg",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ВАННА ЛОНДОН",
+      "size": "2000 мм × 900 мм × 500 мм",
+      "price": "2 360,11 руб.",
+      "old-price": "",
+      "img1": {
+      "src1": "images/bath.png",
+      },
+      "discount": {
+      "title": "-30%",
+      "bg": "red"
+      },
+      "tab1": {
+      "src1": "",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ЗЕРКАЛО ЭКО",
+      "size": "500 мм × 500 мм ",
+      "price": "118,78 руб.",
+      "old-price": "",
+      "img1": {
+      "src1": "images/mirror.png",
+      },
+      "discount": {
+      "title": "-30%",
+      "bg": "red"
+      },
+      "tab1": {
+      "src1": "images/color/shadow.svg",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ТУМБА ПОД УМЫВАЛЬНИК ЭМИЛИЯ",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "234,47 руб.",
+      "old-price": "284,96 руб",
+      "img2": {
+      "src1": "images/good3.png",
+      "src2": "images/good1.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/brown.svg",
+      "src2": "images/color/beige.svg",
+      }
+      })
+      @@include('../components/good/good.html', {
+      "title": "ТУМБА ПОД УМЫВАЛЬНИК",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "499,78 руб.",
+      "old-price": "",
+      "img2": {
+      "src1": "images/good2.png",
+      "src2": "images/good1.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/white.svg",
+      "src2": "images/color/black.svg",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ВАННА ЛОНДОН",
+      "size": "2000 мм × 900 мм × 500 мм",
+      "price": "2 360,11 руб.",
+      "old-price": "",
+      "img1": {
+      "src1": "images/bath.png",
+      },
+      "discount": {
+      "title": "-30%",
+      "bg": "red"
+      },
+      "tab1": {
+      "src1": "",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ЗЕРКАЛО ЭКО",
+      "size": "500 мм × 500 мм ",
+      "price": "118,78 руб.",
+      "old-price": "",
+      "img1": {
+      "src1": "images/mirror.png",
+      },
+      "discount": {
+      "title": "-30%",
+      "bg": "red"
+      },
+      "tab1": {
+      "src1": "images/color/shadow.svg",
+      }
+      })
+
+      @@include('../components/good/good.html', {
+      "title": "ТУМБА ПОД УМЫВАЛЬНИК ЭМИЛИЯ",
+      "size": "500 мм × 500 мм × 500 мм",
+      "price": "234,47 руб.",
+      "old-price": "284,96 руб",
+      "img2": {
+      "src1": "images/good3.png",
+      "src2": "images/good1.png"
+      },
+      "new": {
+      "title": "Новинка",
+      "bg": "blue"
+      },
+      "tab2": {
+      "src1": "images/color/brown.svg",
+      "src2": "images/color/beige.svg",
+      }
+      })
+    </div>
+  </div>
+</div>

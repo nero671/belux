@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Каталог'
+})
+<body>
+<div class="wrapper catalog">
+    @@include('html/header/header.html', {})
+    <main class="page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <div class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        Каталог
+                    </a>
+                    <a href="" class="breadcrumbs__link">
+                        Сантехника
+                    </a>
+                </div>
+            </div>
+        </div>
+        @@include('html/catalog-detail-slider/catalog-detail-slider.html', {})
+        @@include('html/good-category-slider/good-category-slider.html', {})
+        @@include('html/good-catalog/good-catalog.html', {})
+    </main>
+    @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

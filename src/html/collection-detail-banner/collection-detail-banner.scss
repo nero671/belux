@@ -1,0 +1,245 @@
+.collections-detail-banner {
+  position: relative;
+  margin-top: -80px;
+  max-height: 835px;
+  margin-bottom: 200px;
+  @include media(1145) {
+    margin-bottom: -40px;
+  }
+  @include media(375) {
+    margin-bottom: -400px;
+  }
+  @include media(450) {
+    margin-bottom: -370px;
+  }
+  &__slide {
+    display: grid;
+    position: relative;
+    flex-shrink: 0;
+
+  }
+
+  &__img-wrapper {
+    grid-row: 1;
+    grid-column: 1;
+    & img {
+      max-height: 835px;
+      width: 100%;
+      object-fit: cover;
+      @include media(1150) {
+        height: 80%;
+      }
+      @include media(1025) {
+        object-fit: unset;
+        width: auto;
+      }
+      @include media(450) {
+        height: 50%;
+      }
+      @include media(375) {
+        height: 47%;
+      }
+    }
+    @media(min-width: 2000px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__container {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    margin-left: 305px !important;
+
+    @include media(1420) {
+      margin: 0 16px !important;
+    }
+  }
+
+  &_container-wrapper {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 100px;
+
+    @include media(1150) {
+      margin: 60px 0;
+      height: 80%;
+    }
+
+    @include media(600) {
+      margin: 30px 0;
+      height: 50%;
+    }
+
+    @include media(375) {
+      margin: 30px 0;
+      height: 47%;
+    }
+
+    @include media(350) {
+      height: 37%;
+    }
+  }
+
+  &_container__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+
+  &__label {
+    color: #373843;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+    background: #fff;
+    border-radius: 30px;
+    padding: 8px;
+    width: fit-content;
+    margin-bottom: 41px;
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 61.6px */
+    letter-spacing: -1.68px;
+
+    span {
+      color: inherit;
+
+      @include media(757) {
+          display: block;
+      }
+    }
+
+    @include media(600) {
+      font-size: 36px;
+      line-height: 110%;
+    }
+
+  }
+
+  &__subtitle {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.72px;
+
+    @include media(600) {
+      font-size: 16px;
+      line-height: 110%;
+    }
+  }
+
+  &-arrows {
+    position: absolute;
+    top: 50%;
+    justify-content: space-between;
+
+    @include media(1600) {
+      top: 53%;
+    }
+
+    @include media(1250) {
+      top: 50%;
+    }
+
+    @include media(600) {
+      top: 53%;
+    }
+
+    @include media(360) {
+      top: 62%;
+    }
+  }
+
+  &__btn-next {
+    margin-right: 40px;
+
+    @include media(1400) {
+      margin-right: 16px;
+    }
+  }
+
+  &__btn-prev {
+    margin-left: 40px;
+
+    @include media(1400) {
+      margin-left: 16px;
+    }
+  }
+  &__dot-block {
+    @include media(1025) {
+      display: none;
+    }
+    position: absolute;
+    cursor: pointer;
+    &__article {
+      position: relative;
+      left: 12%;
+      display: none;
+      flex-direction: column;
+      padding: 20px;
+      min-width: 320px;
+      min-height: 150px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      &.active {
+        display: flex;
+      }
+      &-bottom {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &__prices {
+          &_price {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+            letter-spacing: -0.48px;
+          }
+          &_oldprice {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+            letter-spacing: -0.42px;
+            text-decoration-line: line-through;
+            color: #A8A9B6;
+          }
+        }
+      }
+      &-title a {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 19.2px */
+        letter-spacing: -0.48px;
+        text-transform: uppercase;
+      }
+      &-descr {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: -0.42px;
+        color: #80818E;
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+.review-form-popup {
+  display: grid;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+  background: rgba(20, 22, 24, 0.4);
+
+  &._is-open {
+    opacity: 1;
+    z-index: 9999999999;
+  }
+
+  &__wrapper {
+    max-width: 520px;
+    padding: 32px;
+    gap: 64px;
+    background: #fff;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__cross {
+    cursor: pointer;
+    text-align: right;
+  }
+  &__title {
+    padding-top: -26px;
+    font-family: 'Montserrat Alternates';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 33px */
+    letter-spacing: -0.9px;
+  }
+  &__rating-area {
+    padding-top: 32px;
+    overflow: hidden;
+    width: 160px;
+
+    &:not(:checked) > input {
+      display: none;
+    }
+
+    &:not(:checked) > label {
+      float: right;
+      width: 32px;
+      padding: 0;
+      cursor: pointer;
+    }
+
+
+    & > input:checked ~ label svg path {
+      fill: #00A0DC;
+    }
+
+    &:not(:checked) > label:hover,
+    &:not(:checked) > label:hover ~ label svg path {
+      fill: #00A0DC;
+    }
+    & > label:hover svg path {
+      fill: #00A0DC;
+    }
+    & > input:checked + label:hover,
+    & > input:checked + label:hover ~ label svg path,
+    & > input:checked ~ label:hover,
+    & > input:checked ~ label:hover ~ label svg path,
+    & > label:hover ~ label svg path {
+      fill: #00A0DC;
+    }
+
+    & > label:active {
+      position: relative;
+    }
+  }
+  &__form {
+    &_inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    &_input {
+      & .form-control__message {
+        font-size: 14px;
+        color: red
+      }
+      &.form-control--error input,
+      &.form-control--error textarea {
+        border-bottom: 1px solid red;
+      }
+      & input {
+        border-radius: 8px;
+        background: var(--grey100, #EFEFF8);
+        height: 56px;
+        padding: 23px 16px;
+        width: 100%;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: -0.42px;
+        color: #A8A9B6;
+
+        &::placeholder {
+          color: #A8A9B6;
+        }
+      }
+      & textarea {
+        border-radius: 8px;
+        background: var(--grey100, #EFEFF8);
+        height: 70px;
+        padding: 23px 16px;
+        width: 100%;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: -0.42px;
+        color: #A8A9B6;
+        resize: none;
+        &::placeholder {
+          color: #A8A9B6;
+        }
+      }
+    }
+  }
+  &__footer {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    @include media(470) {
+      flex-direction: column-reverse;
+    }
+    &_button {
+      border-radius: 8px;
+      background: var(--primary-dark, #373843);
+      display: flex;
+      height: 56px;
+      padding: 20px 48px;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 22.4px */
+      letter-spacing: -0.48px;
+      color: #EFEFF8;
+    }
+    &_desc {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 16.8px */
+      letter-spacing: -0.36px;
+      color: #80818E;
+      & a {
+        color: #00A0DC;
+      }
+    }
+  }
+}
+.form-success,
+.form-fail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 32px 32px 32px;
+  @include media(450) {
+    padding: unset;
+  }
+  &__title {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+  }
+  &__subtitle {
+    padding-bottom: 32px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 150%; /* 24px */
+    text-align: center;
+    & a {
+      text-decoration-line: underline;
+    }
+  }
+  & button {
+    width: 361px;
+  }
+}

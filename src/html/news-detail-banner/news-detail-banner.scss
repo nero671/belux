@@ -1,0 +1,110 @@
+.news-detail-banner {
+  position: relative;
+  margin-top: -80px;
+  max-height: 835px;
+  margin-bottom: 120px;
+  @include media(1145) {
+    margin-bottom: -20px;
+  }
+  &__slide {
+    display: grid;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &__img-wrapper {
+    grid-row: 1;
+    grid-column: 1;
+    overflow: hidden;
+    & img {
+      max-height: 835px;
+      width: 100%;
+      object-fit: cover;
+      @include media(1150) {
+        height: 80%;
+      }
+    }
+    @media(min-width: 2000px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__container {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+  }
+
+  &_container-wrapper {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 100px;
+    @include media(1150) {
+      margin: 60px 0;
+      height: 80%;
+    }
+
+    @include media(600) {
+      margin: 100px 0;
+      height: 50%;
+    }
+  }
+
+  &_container__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+
+  &__title {
+    color: #FFF;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 61.6px */
+    letter-spacing: -1.68px;
+
+    @include media(600) {
+      font-size: 36px;
+      line-height: 110%;
+    }
+
+  }
+  &__date {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.48px;
+    color: #FFFFFF;
+    padding-bottom: 24px;
+    opacity: 0.5;
+  }
+}
+.news-detail-banner.no-img {
+  padding-top: 90px;
+  margin-bottom: 0px;
+  & .news-detail-banner__title {
+    color: #373843;
+  }
+  & .news-detail-banner__date {
+    color: #373843;
+  }
+  & .news-detail-banner_container-wrapper {
+    padding-bottom: 60px;
+    @include media(1150) {
+      margin: 0;
+    }
+    @include media(936) {
+      width: 100%;
+    }
+  }
+}

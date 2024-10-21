@@ -1,0 +1,164 @@
+.feedback {
+  background: url('../images/feedback-bg.png') no-repeat center top / cover;
+  margin-top: 240px;
+
+  @include media(1020) {
+    margin-top: 30px;
+  }
+
+  &__container {
+    padding: 123px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 260px;
+
+    @include media(1420) {
+      padding: 60px 16px;
+    }
+
+    @include media(945) {
+      gap: 60px;
+    }
+
+    @include media(770) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include media(600) {
+      padding: 32px 16px;
+      gap: 80px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: #FFF;;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.9px;
+    margin-bottom: 60px;
+
+    @include media(600) {
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.6px;
+    max-width: 330px;
+
+    @include media(600) {
+      max-width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  &-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 10px;
+
+    @include media(770) {
+      display: flex;
+    }
+
+    @include media(600) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pristine-error {
+      margin-top: 9px;
+      color: white;
+      font-size: 12px;
+    }
+
+    .form-control--error input,
+    .form-control--error textarea {
+      border-bottom: 2px solid red;
+    }
+
+    input {
+      width: 443px;
+      color: #80818E;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.42px;
+      border-radius: 8px;
+      background: #FFF;
+      padding: 23px 20px;
+      border-bottom: none;
+
+      @include media(1420) {
+        width: 320px;
+      }
+
+      @include media(600) {
+        width: 100%;
+      }
+
+      &::placeholder {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.42px;
+      }
+    }
+
+    & button {
+      padding: 23px 20px;
+      border-radius: 8px;
+      background: #373843;
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: -0.48px;
+      transition: 0.35s;
+      width: 197px;
+      @include media(600) {
+        width: 100%;
+      }
+       &:hover {
+         background: #000;
+         transition: 0.35s;
+       }
+    }
+  }
+
+  &-after-form__text {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.36px;
+    max-width: 443px;
+    margin-top: auto;
+
+    @include media(770) {
+      margin-top: 16px;
+    }
+  }
+}
+.contacts .feedback-form .pristine-error {
+  color: red;
+}

@@ -1,0 +1,48 @@
+.new-good {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  .arrow {
+    width: initial;
+    gap: 57px;
+    margin-left: auto;
+  }
+
+  .swiper {
+    margin-top: 60px;
+    overflow: visible !important;
+
+    @include media(600) {
+      margin-top: 30px;
+    }
+  }
+}
+.other-collections-slider {
+  margin-bottom: 240px;
+  @include media(768) {
+    margin-bottom: 60px;
+  }
+  & .good {
+    padding: 0;
+    height: 100% !important;
+  }
+  & .collections-img__link {
+    max-height: 400px;
+  }
+  & .collections-img__link img {
+    @include media(1320) {
+      height: 400px;
+    }
+    @include media(375) {
+      height: 270px;
+    }
+  }
+}

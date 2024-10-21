@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Оформление заказа'
+})
+<body>
+<div class="order">
+    @@include('html/header/header.html', {})
+    <main class="page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <div class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        Корзина
+                    </a>
+                    <a href="" class="breadcrumbs__link">
+                        Оформление заказа
+                    </a>
+                </div>
+            </div>
+        </div>
+        @@include('html/order/order.html', {})
+        @@include('html/components/pickup-popup/pickup-popup.html', {})
+    </main>
+    @@include('html/footer/footer.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

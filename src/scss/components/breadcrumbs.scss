@@ -1,0 +1,42 @@
+.breadcrumbs {
+  padding: 32px 0;
+  position: relative;
+  z-index: 10;
+
+  @include media(600) {
+    padding: 20px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  .collection-detail &,
+  .news-detail &,
+  .about & {
+    & a {
+      color: #ffffff;
+    }
+    & a:last-child {
+      color: #ffffff;
+      opacity: 0.7;
+    }
+  }
+    a {
+      color: #5A5B67;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      letter-spacing: -0.36px;
+
+      &:not(:last-child):after {
+        content: '/';
+        padding: 0 11px;
+      }
+
+      &:last-child {
+        color: #A8A9B6;
+      }
+    }
+  }
+}
